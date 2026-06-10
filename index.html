@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Recipe Card</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="recipe-card">
+
+    <!-- Dark Mode -->
+    <button id="darkModeBtn" class="dark-btn">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- Category -->
+    <span class="category">Dessert</span>
+
+    <!-- Title -->
+    <h1>Chocolate Cake</h1>
+
+    <!-- Image -->
+    <img src="cake.jpg" alt="Chocolate Cake" class="recipe-img">
+
+    <!-- Info -->
+    <div class="info">
+
+        <div>
+            <i class="fa-solid fa-clock"></i>
+            30 Minutes
+        </div>
+
+        <div>
+            <i class="fa-solid fa-users"></i>
+            Serves 4
+        </div>
+
+        <div>
+            <i class="fa-solid fa-fire"></i>
+            450 Calories
+        </div>
+
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+
+        <button id="toggleIngredients">
+            <i class="fa-solid fa-bowl-food"></i>
+            Ingredients
+        </button>
+
+        <button id="toggleSteps">
+            <i class="fa-solid fa-list-check"></i>
+            Steps
+        </button>
+
+    </div>
+
+    <!-- Ingredients -->
+    <div class="section hidden" id="ingredientsSection">
+
+        <h2>Ingredients</h2>
+
+        <ul class="ingredients">
+            <li>2 cups flour</li>
+            <li>1 cup sugar</li>
+            <li>1/2 cup cocoa powder</li>
+            <li>2 eggs</li>
+            <li>1 cup milk</li>
+            <li>1 tsp baking powder</li>
+        </ul>
+
+    </div>
+
+    <!-- Steps -->
+    <div class="section hidden" id="stepsSection">
+
+        <h2>Instructions</h2>
+
+        <ol class="steps" id="stepsList">
+            <li>Mix all dry ingredients.</li>
+            <li>Add eggs and milk.</li>
+            <li>Whisk until smooth.</li>
+            <li>Pour batter into tray.</li>
+            <li>Bake at 180°C for 30 minutes.</li>
+        </ol>
+
+        <div class="cook-buttons">
+
+            <button id="startCooking">
+                Start Cooking
+            </button>
+
+            <button id="nextStep">
+                Next Step
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Timer -->
+    <div class="timer">
+
+        <h3>Cooking Timer</h3>
+
+        <p id="time">30:00</p>
+
+    </div>
+
+</div>
+
+<!-- Audio -->
+<audio id="clickSound" src="click.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
